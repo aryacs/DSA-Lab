@@ -25,13 +25,11 @@ int main(){
     printf("Do you want to continue(0,1):");
     scanf("%d",&choice);
     }while(choice == 1);
-    while(head!=NULL){
-        printf("%d ",head->data);
-        head=head->next;
-    }   
+    temp=head;
     while(temp->next!=head){
         printf("%d ",temp->data);
         temp=temp->next;
     }
+    printf("%d ",temp->data); // Print the last node
     return 0;
 }
